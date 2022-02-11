@@ -1,0 +1,20 @@
+{
+  "name": "@like/hocs",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "oneshunzi <501562071@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "files": [
+    "es"
+  ],
+  "scripts": {
+    "test": "umi-test",
+    "build": "father-build"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0 || ^17.0.0"
+  },
+  "gitHead": "09a141236ae326f44b5b9ef72b18d25f2f257aa6"
+}

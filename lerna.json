@@ -1,0 +1,22 @@
+{
+  "version": "independent",
+  "packages": [
+    "packages/*"
+  ],
+  "npmClient": "yarn",
+  "command": {
+    "ignoreChanges": [
+      "ignored-file",
+      "**/__tests__/**",
+      "**/*.md",
+      "**/tsconfig.json"
+    ],
+    "publish": {
+      "registry": "http://localhost:4873"
+    },
+    "version": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish"
+    }
+  }
+}
