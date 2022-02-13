@@ -20,7 +20,7 @@ jobs:
       
       - name: Install and Build 🔧 
         run: |
-          npm build
+          npm install
           npm run docs:build
 
       - name: Deploy 🚀
