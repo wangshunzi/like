@@ -13,12 +13,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
       
-      - run: npm run clean
-      - run: npm run bootstrap
-      - run: npm run docs:build
-      - name: Deploy
+      - name: Install and Build 🔧 
+        run: |
+          npm build
+          npm run docs:build
+
+      - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
