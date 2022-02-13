@@ -13,5 +13,19 @@ export default defineConfig({
   resolve: {
     includes: ['docs', 'packages/hooks/src', 'packages/hocs/src','packages/components/src'],
   },
+  navs: [
+    {
+      title: 'Hooks',
+      path: '/hooks',
+    },
+    {
+      title: 'Hocs',
+      path: '/hocs',
+    },
+    {
+      title: 'Components',
+      path: '/components',
+    },
+  ],
   // more config: https://d.umijs.org/config
 });

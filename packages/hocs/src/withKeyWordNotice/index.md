@@ -42,9 +42,11 @@ function App() {
     }, [])
     return <div>
         <input value={kv} onChange={e=>setKv(e.target.value)}/>
-        {data.map(item => {
-            return <Card item={item} key={item.id} kv={kv}/>
-        })}
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
+            {data.map(item => {
+                return <Card item={item} key={item.id} kv={kv}/>
+            })}
+        </div>
     </div>
 }
 
@@ -85,9 +87,11 @@ function App() {
     }, [])
     return <div>
         <input value={kv} onChange={e=>setKv(e.target.value)}/>
-        {data.map(item => {
-            return <Card item={item} key={item.id} kv={kv}/>
-        })}
+        <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
+            {data.map(item => {
+                return <Card item={item} key={item.id} kv={kv}/>
+            })}
+        </div>
     </div>
 }
 
@@ -120,7 +124,7 @@ function Root() {
             {id: 3, title: "兔兔", price: 13, src: `https://picsum.photos/id/${Math.round(Math.random() * 1084)}/200/100`},
         ])
     }, [])
-    return <div>
+    return <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-around'}}>
         {data.map(item => {
             return <Card item={item} key={item.id}/>
         })}
