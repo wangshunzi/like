@@ -38,7 +38,11 @@ const noticeWord: (kv: string, elements: any[], kvElement?: (kv: string) => any)
 
       return child;
     }
-
+    // console.log(child.props.className);
+    // 如果配有 特定类名，则忽略关键字匹配
+    if (child.props.className && child.props.className.search(/\bignore-kv-notice\b/) !== -1) {
+      return child;
+    }
     if (child.props && child.props.children && child.props.children.length > 0) {
       return React.cloneElement(
         child,
